@@ -74,8 +74,9 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         beforeEach(function(done) {
-            loadFeed(0, done) {
+            loadFeed(0, done) 
          });
+         
         
          it('are present', function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
