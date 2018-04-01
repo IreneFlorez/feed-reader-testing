@@ -30,7 +30,7 @@ $(function() {
          * and that the URL is not empty.
          */
         it('URL posted', function() {
-            for (i in allFeeds) {
+            for (var i=0, len=allFeeds.length; i<len; i++) {
                 expect(allFeeds[i].url).toBeDefined();
                 expect(allFeeds[i].url).not.toBe(0);
             }
@@ -39,7 +39,7 @@ $(function() {
          * and that the name is not empty.
          */
         it('Names posted', function() {
-            for (i in allFeeds) {
+            for (var i=0, len=allFeeds.length; i<len; i++) {
                 expect(allFeeds[i].name).toBeDefined();
                 expect(allFeeds[i].name).not.toBe(0);
             }
@@ -74,9 +74,8 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         beforeEach(function(done) {
-            loadFeed(0, done) 
+            loadFeed(0, done); 
          });
-         
         
          it('are present', function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
@@ -103,4 +102,4 @@ $(function() {
             expect($('.feed').html()).not.toBe(startFeed);
         });
     });
-}());
+    }());
