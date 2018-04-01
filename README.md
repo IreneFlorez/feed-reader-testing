@@ -13,7 +13,7 @@ downloading the project, double-clicking on `index.html` and browsing locally.
 
 ### Option 2 - Github pages
 
-You can view an online version of this project at....
+You can view an online version of this project at https://ireneflorez.github.io/feed-reader-testing/
 
 ### Option 3 - server
 
