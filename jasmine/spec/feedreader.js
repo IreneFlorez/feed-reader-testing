@@ -31,7 +31,8 @@ $(function() {
         it('URL posted', function() {
             for (var i=0, len=allFeeds.length; i<len; i++) {
                 expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBe(0);
+                expect(allFeeds[i].url.length).not.toBe(0);
+                expect(feed.url).toMatch(/^(http|https):\/\//);
             }
         });
         /* Test that loops through each feed in the allFeeds object and ensures it has a name defined
@@ -40,7 +41,8 @@ $(function() {
         it('Names posted', function() {
             for (var i=0, len=allFeeds.length; i<len; i++) {
                 expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name).not.toBe(0);
+                expect(typeof allFeeds[i].name).toBe("string");
+                expect(allFeeds[i].name.length).not.toBe(0);
             }
         });
     });
